@@ -340,7 +340,8 @@ public class PersonaDetalleViewController implements Initializable {
         comboBoxProvincia.setItems(FXCollections.observableList(listProvincia));
         comboBoxProvincia.setCellFactory((ListView<Provincia> l) -> new ListCell<Provincia>() {
             //comboBoxProvincia.setCellFactory((ListView<Provincia> 1) -> new ListCell<Provincia>(){ 
-            protected void updateItem(Provincia provincia, Boolean empty) {
+            @Override
+            protected void updateItem(Provincia provincia, boolean empty) {
                 super.updateItem(provincia, empty);
                 if (provincia == null || empty) {
                     setText("");
